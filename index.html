@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Menu · Festa di Sant'Agostino 2026</title>
-<meta name="description" content="Il menu della Festa di Sant'Agostino 2026: piadine, hamburger, fritti e bevande.">
+<title>Festa di Sant'Agostino 2026 · Grazie!</title>
+<meta name="description" content="La Festa di Sant'Agostino 2026 è finita. Arrivederci all'anno prossimo.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -16,7 +16,6 @@
     --rosso:#B5232B;
     --mais:#E8B33C;
     --inchiostro:#1A211D;
-    --riga:rgba(20,69,47,.18);
     --display:"Archivo Black",system-ui,sans-serif;
     --testo:"Archivo",system-ui,sans-serif;
   }
@@ -88,199 +87,36 @@
     font-size:15px;color:rgba(251,246,234,.8);
   }
 
-  /* ---------- Navigazione sezioni ---------- */
-  .banchi{
-    position:sticky;top:0;z-index:10;
-    background:var(--panna);
-    border-bottom:1px solid var(--riga);
-    padding:10px 0;
+  /* ---------- Sezione saluti ---------- */
+  .saluti{
+    text-align:center;
+    padding:70px 20px 60px;
   }
-  .banchi ul{
-    display:flex;gap:8px;justify-content:center;flex-wrap:wrap;
-    list-style:none;margin:0;padding:0;
-  }
-  .banchi a{
-    display:block;
-    padding:8px 16px;
-    border:1.5px solid var(--verde);
-    border-radius:999px;
+  .saluti h2{
+    font-family:var(--display);
+    font-size:clamp(2.4rem,8vw,4.2rem);
     color:var(--verde);
-    text-decoration:none;
-    font-size:13px;font-weight:600;
-    letter-spacing:.1em;text-transform:uppercase;
-    transition:background .18s,color .18s;
+    margin:0 0 16px;
+    letter-spacing:.02em;
   }
-  .banchi a:hover,.banchi a:focus-visible{background:var(--verde);color:var(--panna)}
-  a:focus-visible{outline:3px solid var(--rosso);outline-offset:3px}
-
-  /* ---------- Sezioni ---------- */
-  .sezione{margin:44px 0 0}
-  .insegna{
-    background:var(--verde);
-    color:var(--panna);
-    border-radius:4px;
-    padding:16px 22px;
-    display:flex;align-items:baseline;justify-content:space-between;gap:16px;
-    position:relative;
+  .saluti p{
+    font-size:clamp(1.2rem,3.2vw,2rem);
+    color:var(--inchiostro);
+    margin:0;
   }
-  /* firma: le lampadine appese sopra l'insegna del banco */
-  .insegna::before{
-    content:"";
-    position:absolute;left:18px;right:18px;top:-9px;height:9px;
-    background-image:radial-gradient(circle at center,var(--mais) 0 3.5px,transparent 4px);
-    background-size:26px 9px;
-    background-repeat:repeat-x;
-    background-position:center bottom;
-  }
-  .insegna h2{
-    font-family:var(--display);
-    font-size:clamp(1.3rem,4vw,1.9rem);
-    margin:0;text-transform:uppercase;letter-spacing:.02em;
-  }
-  .insegna p{margin:0;font-size:13px;color:var(--mais);letter-spacing:.06em;text-transform:uppercase}
-
-  .voci{list-style:none;margin:0;padding:0}
-  .voce{
-    display:flex;align-items:baseline;gap:10px;
-    padding:13px 4px;
-    border-bottom:1px solid var(--riga);
-  }
-  .voce:last-child{border-bottom:0}
-  .nome{font-weight:600}
-  .nome em{
-    display:block;font-style:italic;font-weight:400;
-    font-size:14px;color:rgba(26,33,29,.62);margin-top:2px;
-  }
-  .punti{
-    flex:1;
-    border-bottom:1.5px dotted var(--riga);
-    transform:translateY(-4px);
-    min-width:18px;
-  }
-  .prezzo{
-    font-family:var(--display);
-    font-size:1.05rem;
-    white-space:nowrap;
-    font-variant-numeric:tabular-nums;
-  }
-  /* due formati sulla stessa riga: piccola / grande */
-  .formati{display:flex;gap:20px;white-space:nowrap}
-  .formato{text-align:right}
-  .formato small{
-    display:block;
-    font-family:var(--testo);
-    font-size:11px;font-weight:600;
-    letter-spacing:.08em;text-transform:uppercase;
-    color:rgba(26,33,29,.55);
-  }
-
-  /* ---------- Chiusura ---------- */
-  .chiusura{
-    margin:52px 0 0;
-    background:var(--verde);color:var(--panna);
-    text-align:center;padding:30px 20px;
-  }
-  .chiusura p{margin:0 0 6px;font-size:14px;color:rgba(251,246,234,.82)}
-  .chiusura strong{color:var(--mais)}
-
-  /* ---------- Stampa: A4, due colonne, niente colore di fondo ---------- */
-
-
-.qr{
-  max-width:820px; margin:2.4rem auto .6rem; padding:0 1rem;
-  display:flex; flex-direction:column; align-items:center; gap:.55rem; text-align:center;
-}
-.qr svg{
-  width:104px; height:104px; display:block;
-  background:#fff; padding:7px; border-radius:6px;
-  border:2px solid var(--verde);
-}
-.qr p{margin:0; font-size:.74rem; letter-spacing:.06em; text-transform:uppercase; font-weight:700; color:var(--verde)}
-.qr a{color:var(--verde); text-decoration:none; font-size:.78rem; letter-spacing:.01em; text-transform:none; font-weight:400}
-.qr a:hover{text-decoration:underline}
-
-.barra-stampa{
-  display:none;
-  gap:.6rem; justify-content:center; flex-wrap:wrap;
-  margin:0 auto 2.2rem; padding:0 1rem; max-width:820px;
-}
-body.mostra-stampa .barra-stampa{display:flex}
-.barra-stampa button{
-  font-family:inherit; font-size:.82rem; font-weight:700; letter-spacing:.04em;
-  text-transform:uppercase; cursor:pointer;
-  padding:.6rem 1.1rem; border-radius:999px;
-  border:2px solid var(--verde); background:transparent; color:var(--verde);
-  transition:background .15s ease, color .15s ease;
-}
-.barra-stampa button:hover{background:var(--verde); color:var(--panna)}
-.barra-stampa button.primario{background:var(--rosso); border-color:var(--rosso); color:var(--panna)}
-.barra-stampa button.primario:hover{background:var(--verde); border-color:var(--verde)}
-@media print{ .barra-stampa{display:none !important} }
 
   @media print{
     @page{size:A4;margin:12mm}
-    body{background:#fff;color:#000;font-size:10.5pt;line-height:1.3}
-    .banchi,.chiusura{display:none}
-    .qr{margin:6mm auto 0; padding:0; break-inside:avoid}
-    .qr svg{width:74px; height:74px; border:1pt solid #000; padding:4px}
-    .qr p{color:#000; font-size:7.5pt}
-    .qr a{color:#000; font-size:7.5pt}
-    body.stampa-colore .qr svg{border-color:var(--verde)}
-    body.stampa-colore .qr p, body.stampa-colore .qr a{color:var(--verde)}
-
-    .wrap{max-width:none;padding:0}
-    .testata{
-      background:#fff;color:#000;padding:0 0 8mm;border-bottom:2pt solid #000;
-    }
+    body{background:#fff;color:#000;font-size:10.5pt}
+    .testata{background:#fff;color:#000;padding:0 0 8mm;border-bottom:2pt solid #000}
     .testata::after{display:none}
-    .occhiello{color:#000;margin-bottom:4pt}
-    .titolo .riga1{font-size:12pt}
-    .titolo .riga2{font-size:24pt;color:#000}
-    .titolo .anno{font-size:11pt;color:#000}
-    .sottotitolo{color:#000;margin-top:6pt}
-    .sezione{margin:7mm 0 0;break-inside:avoid}
-    .insegna{
-      background:#fff;color:#000;padding:0 0 3pt;
-      border-bottom:1.5pt solid #000;border-radius:0;
-    }
-    .insegna::before{display:none}
-    .insegna h2{font-size:14pt}
-    .insegna p{color:#000}
-    .voce{padding:5pt 0;border-bottom:.5pt solid #bbb;break-inside:avoid}
-    .nome em{color:#333;font-size:9pt}
-    .prezzo{font-size:11pt}
-    .formato small{color:#333}
-    /* i fritti stanno in coda alla cucina: due colonne solo dove serve */
-    .voci{columns:2;column-gap:10mm}
-    .voce{break-inside:avoid}
-    #bevande .voci{columns:2}
-
-    /* ===== STAMPA A COLORI: attiva con il pulsante, ripristina la grafica ===== */
-    body.stampa-colore{
-      background:var(--panna); color:var(--verde);
-      -webkit-print-color-adjust:exact; print-color-adjust:exact;
-    }
-    body.stampa-colore *{-webkit-print-color-adjust:exact; print-color-adjust:exact}
-    body.stampa-colore .testata{
-      background:var(--verde); color:var(--panna);
-      padding:10mm 8mm 8mm; border-bottom:none;
-    }
-    body.stampa-colore .occhiello{color:var(--mais)}
-    body.stampa-colore .titolo .riga2{color:var(--panna)}
-    body.stampa-colore .titolo .anno{color:var(--mais)}
-    body.stampa-colore .sottotitolo{color:var(--panna); opacity:.92}
-    body.stampa-colore .insegna{
-      background:var(--verde); color:var(--panna);
-      padding:5pt 8pt; border-bottom:none; border-radius:4pt;
-    }
-    body.stampa-colore .insegna h2{color:var(--panna)}
-    body.stampa-colore .insegna p{color:var(--mais)}
-    body.stampa-colore .voce{border-bottom:.5pt dotted rgba(20,69,47,.45)}
-    body.stampa-colore .nome{color:var(--verde)}
-    body.stampa-colore .nome em{color:rgba(20,69,47,.75)}
-    body.stampa-colore .prezzo{color:var(--rosso)}
-    body.stampa-colore .formato small{color:rgba(20,69,47,.7)}
-    body.stampa-colore .punti{border-bottom:.5pt dotted rgba(20,69,47,.4)}
+    .occhiello{color:#000}
+    .titolo .riga2{color:#000}
+    .titolo .anno{color:#000}
+    .sottotitolo{color:#000}
+    .saluti h2{color:#000}
+    .saluti p{color:#000}
+    .wrap{max-width:none;padding:0}
   }
 </style>
 </head>
@@ -290,195 +126,16 @@ body.mostra-stampa .barra-stampa{display:flex}
   <div class="wrap">
     <p class="occhiello">Parrocchia di Sant'Agostino · Ferrara</p>
     <h1 class="titolo"><span class="riga1">Festa di</span><span class="riga2">Sant'Agostino</span><span class="anno">2026</span></h1>
-    <p class="sottotitolo">Due weekend di piadine e hamburger!!<br>Si ordina alla cassa e si ritirano le bevande.<br>Il cibo verrà servito al tavolo.</p>
+    <p class="sottotitolo">Grazie a tutti per aver partecipato!<br>Ci vediamo l'anno prossimo.</p>
   </div>
 </header>
 
-<nav class="banchi" aria-label="Sezioni del menu">
-  <ul>
-    <li><a href="#cucina">Cucina</a></li>
-    <li><a href="#fritti">Fritti</a></li>
-    <li><a href="#bevande">Bevande</a></li>
-  </ul>
-</nav>
-
 <main class="wrap">
-
-  <section class="sezione" id="cucina">
-    <div class="insegna">
-      <h2>Cucina</h2>
-      <p>Piadine e hamburger</p>
-    </div>
-    <ul class="voci">
-      <li class="voce">
-        <span class="nome">Piadina prosciutto crudo</span>
-        <span class="punti" aria-hidden="true"></span>
-        <span class="prezzo">5,50</span>
-      </li>
-      <li class="voce">
-        <span class="nome">Piadina prosciutto crudo e formaggio</span>
-        <span class="punti" aria-hidden="true"></span>
-        <span class="prezzo">5,50</span>
-      </li>
-      <li class="voce">
-        <span class="nome">Piadina salame ferrarese</span>
-        <span class="punti" aria-hidden="true"></span>
-        <span class="prezzo">5,50</span>
-      </li>
-      <li class="voce">
-        <span class="nome">Piadina salame ferrarese e formaggio</span>
-        <span class="punti" aria-hidden="true"></span>
-        <span class="prezzo">5,50</span>
-      </li>
-      <li class="voce">
-        <span class="nome">Piadina prosciutto cotto</span>
-        <span class="punti" aria-hidden="true"></span>
-        <span class="prezzo">5,00</span>
-      </li>
-      <li class="voce">
-        <span class="nome">Piadina prosciutto cotto e formaggio</span>
-        <span class="punti" aria-hidden="true"></span>
-        <span class="prezzo">5,00</span>
-      </li>
-      <li class="voce">
-        <span class="nome">Piadina solo formaggio</span>
-        <span class="punti" aria-hidden="true"></span>
-        <span class="prezzo">5,00</span>
-      </li>
-      <li class="voce">
-        <span class="nome">Piatto hamburger<em>Carne del macellaio, pomodoro, insalata, maionese e ketchup, con patatine fritte</em></span>
-        <span class="punti" aria-hidden="true"></span>
-        <span class="prezzo">9,50</span>
-      </li>
-    </ul>
+  <section class="saluti">
+    <h2>La festa è finita!</h2>
+    <p>Arrivederci all'anno prossimo.</p>
   </section>
-
-  <section class="sezione" id="fritti">
-    <div class="insegna">
-      <h2>Fritti</h2>
-      <p>Dalla friggitrice</p>
-    </div>
-    <ul class="voci">
-      <li class="voce">
-        <span class="nome">Patatine fritte<em>Con ketchup e maionese</em></span>
-        <span class="punti" aria-hidden="true"></span>
-        <span class="prezzo">3,00</span>
-      </li>
-    </ul>
-  </section>
-
-  <section class="sezione" id="bevande">
-    <div class="insegna">
-      <h2>Bevande</h2>
-      <p>Spina e bottiglia</p>
-    </div>
-    <ul class="voci">
-      <li class="voce">
-        <span class="nome">Birra bionda<em>Alla spina</em></span>
-        <span class="punti" aria-hidden="true"></span>
-        <span class="formati">
-          <span class="formato"><small>0,2 L</small><span class="prezzo">2,50</span></span>
-          <span class="formato"><small>0,4 L</small><span class="prezzo">4,00</span></span>
-        </span>
-      </li>
-      <li class="voce">
-        <span class="nome">Birra rossa<em>Alla spina</em></span>
-        <span class="punti" aria-hidden="true"></span>
-        <span class="formati">
-          <span class="formato"><small>0,2 L</small><span class="prezzo">3,00</span></span>
-          <span class="formato"><small>0,4 L</small><span class="prezzo">5,00</span></span>
-        </span>
-      </li>
-      <li class="voce">
-        <span class="nome">Coca Cola<em>Alla spina</em></span>
-        <span class="punti" aria-hidden="true"></span>
-        <span class="formati">
-          <span class="formato"><small>0,2 L</small><span class="prezzo">2,50</span></span>
-          <span class="formato"><small>0,4 L</small><span class="prezzo">4,00</span></span>
-        </span>
-      </li>
-      <li class="voce">
-        <span class="nome">Vino bianco frizzante<em>Alla spina</em></span>
-        <span class="punti" aria-hidden="true"></span>
-        <span class="formati">
-          <span class="formato"><small>0,2 L</small><span class="prezzo">2,50</span></span>
-        </span>
-      </li>
-      <li class="voce">
-        <span class="nome">Spritz Aperol</span>
-        <span class="punti" aria-hidden="true"></span>
-        <span class="prezzo">3,50</span>
-      </li>
-      <li class="voce">
-        <span class="nome">Spritz Campari</span>
-        <span class="punti" aria-hidden="true"></span>
-        <span class="prezzo">3,50</span>
-      </li>
-      <li class="voce">
-        <span class="nome">Sprite<em>Lattina 0,33 L</em></span>
-        <span class="punti" aria-hidden="true"></span>
-        <span class="prezzo">2,00</span>
-      </li>
-      <li class="voce">
-        <span class="nome">Coca Cola senza caffeina<em>Lattina 0,33 L</em></span>
-        <span class="punti" aria-hidden="true"></span>
-        <span class="prezzo">2,00</span>
-      </li>
-      <li class="voce">
-        <span class="nome">Tè al limone<em>Lattina 0,33 L</em></span>
-        <span class="punti" aria-hidden="true"></span>
-        <span class="prezzo">2,00</span>
-      </li>
-      <li class="voce">
-        <span class="nome">Tè alla pesca<em>Lattina 0,33 L</em></span>
-        <span class="punti" aria-hidden="true"></span>
-        <span class="prezzo">2,00</span>
-      </li>
-      <li class="voce">
-        <span class="nome">Acqua naturale<em>Bottiglia 0,5 L</em></span>
-        <span class="punti" aria-hidden="true"></span>
-        <span class="prezzo">1,00</span>
-      </li>
-      <li class="voce">
-        <span class="nome">Acqua frizzante<em>Bottiglia 0,5 L</em></span>
-        <span class="punti" aria-hidden="true"></span>
-        <span class="prezzo">1,00</span>
-      </li>
-    </ul>
-  </section>
-
 </main>
-
-  <div class="barra-stampa">
-    <button type="button" class="primario" onclick="stampa(true)">Stampa a colori</button>
-    <button type="button" onclick="stampa(false)">Stampa in bianco e nero</button>
-  </div>
-
-<script>
-if(new URLSearchParams(location.search).has('print')){
-  document.body.classList.add('mostra-stampa');
-}
-function stampa(colore){
-  document.body.classList.toggle('stampa-colore', colore);
-  window.print();
-}
-window.addEventListener('afterprint', function(){
-  document.body.classList.remove('stampa-colore');
-});
-</script>
-
-
-
-<div class="qr">
-  <p>Il menu sul telefono</p>
-  <svg viewBox="0 0 33 33" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" role="img" aria-label="QR code del menu"><rect width="33" height="33" fill="#fff"/><path d="M2 2h7v1h-7zM13 2h5v1h-5zM21 2h2v1h-2zM24 2h7v1h-7zM2 3h1v1h-1zM8 3h1v1h-1zM13 3h6v1h-6zM22 3h1v1h-1zM24 3h1v1h-1zM30 3h1v1h-1zM2 4h1v1h-1zM4 4h3v1h-3zM8 4h1v1h-1zM10 4h3v1h-3zM15 4h1v1h-1zM17 4h1v1h-1zM20 4h1v1h-1zM24 4h1v1h-1zM26 4h3v1h-3zM30 4h1v1h-1zM2 5h1v1h-1zM4 5h3v1h-3zM8 5h1v1h-1zM10 5h2v1h-2zM13 5h2v1h-2zM16 5h2v1h-2zM19 5h1v1h-1zM21 5h1v1h-1zM24 5h1v1h-1zM26 5h3v1h-3zM30 5h1v1h-1zM2 6h1v1h-1zM4 6h3v1h-3zM8 6h1v1h-1zM10 6h4v1h-4zM17 6h6v1h-6zM24 6h1v1h-1zM26 6h3v1h-3zM30 6h1v1h-1zM2 7h1v1h-1zM8 7h1v1h-1zM10 7h2v1h-2zM20 7h1v1h-1zM22 7h1v1h-1zM24 7h1v1h-1zM30 7h1v1h-1zM2 8h7v1h-7zM10 8h1v1h-1zM12 8h1v1h-1zM14 8h1v1h-1zM16 8h1v1h-1zM18 8h1v1h-1zM20 8h1v1h-1zM22 8h1v1h-1zM24 8h7v1h-7zM10 9h5v1h-5zM16 9h1v1h-1zM18 9h1v1h-1zM20 9h3v1h-3zM2 10h1v1h-1zM4 10h5v1h-5zM12 10h2v1h-2zM18 10h2v1h-2zM24 10h5v1h-5zM2 11h3v1h-3zM9 11h2v1h-2zM13 11h5v1h-5zM21 11h6v1h-6zM30 11h1v1h-1zM2 12h2v1h-2zM5 12h1v1h-1zM8 12h2v1h-2zM12 12h1v1h-1zM14 12h5v1h-5zM23 12h1v1h-1zM26 12h1v1h-1zM3 13h4v1h-4zM9 13h1v1h-1zM12 13h1v1h-1zM14 13h2v1h-2zM17 13h1v1h-1zM21 13h2v1h-2zM25 13h3v1h-3zM29 13h1v1h-1zM2 14h2v1h-2zM6 14h1v1h-1zM8 14h3v1h-3zM12 14h1v1h-1zM14 14h1v1h-1zM16 14h2v1h-2zM19 14h1v1h-1zM21 14h1v1h-1zM25 14h1v1h-1zM27 14h2v1h-2zM4 15h1v1h-1zM7 15h1v1h-1zM11 15h1v1h-1zM13 15h2v1h-2zM17 15h2v1h-2zM20 15h2v1h-2zM23 15h4v1h-4zM30 15h1v1h-1zM4 16h1v1h-1zM8 16h2v1h-2zM12 16h2v1h-2zM19 16h2v1h-2zM27 16h2v1h-2zM7 17h1v1h-1zM9 17h2v1h-2zM13 17h1v1h-1zM16 17h1v1h-1zM18 17h1v1h-1zM20 17h3v1h-3zM24 17h2v1h-2zM29 17h1v1h-1zM2 18h2v1h-2zM7 18h2v1h-2zM12 18h1v1h-1zM14 18h1v1h-1zM18 18h3v1h-3zM22 18h1v1h-1zM27 18h2v1h-2zM2 19h1v1h-1zM5 19h1v1h-1zM7 19h1v1h-1zM10 19h1v1h-1zM12 19h2v1h-2zM15 19h3v1h-3zM19 19h3v1h-3zM23 19h4v1h-4zM28 19h1v1h-1zM30 19h1v1h-1zM2 20h1v1h-1zM5 20h1v1h-1zM8 20h1v1h-1zM10 20h2v1h-2zM13 20h1v1h-1zM15 20h5v1h-5zM24 20h3v1h-3zM28 20h1v1h-1zM2 21h1v1h-1zM5 21h1v1h-1zM9 21h1v1h-1zM11 21h2v1h-2zM14 21h2v1h-2zM17 21h1v1h-1zM20 21h2v1h-2zM24 21h1v1h-1zM26 21h1v1h-1zM29 21h1v1h-1zM2 22h1v1h-1zM4 22h7v1h-7zM12 22h3v1h-3zM16 22h2v1h-2zM19 22h1v1h-1zM22 22h5v1h-5zM28 22h3v1h-3zM10 23h2v1h-2zM17 23h6v1h-6zM26 23h5v1h-5zM2 24h7v1h-7zM11 24h1v1h-1zM13 24h1v1h-1zM20 24h3v1h-3zM24 24h1v1h-1zM26 24h3v1h-3zM2 25h1v1h-1zM8 25h1v1h-1zM10 25h3v1h-3zM14 25h1v1h-1zM16 25h1v1h-1zM18 25h1v1h-1zM22 25h1v1h-1zM26 25h1v1h-1zM29 25h2v1h-2zM2 26h1v1h-1zM4 26h3v1h-3zM8 26h1v1h-1zM10 26h1v1h-1zM12 26h1v1h-1zM19 26h1v1h-1zM22 26h5v1h-5zM28 26h1v1h-1zM30 26h1v1h-1zM2 27h1v1h-1zM4 27h3v1h-3zM8 27h1v1h-1zM10 27h2v1h-2zM14 27h4v1h-4zM19 27h2v1h-2zM23 27h1v1h-1zM27 27h2v1h-2zM2 28h1v1h-1zM4 28h3v1h-3zM8 28h1v1h-1zM10 28h1v1h-1zM12 28h1v1h-1zM14 28h2v1h-2zM17 28h3v1h-3zM24 28h6v1h-6zM2 29h1v1h-1zM8 29h1v1h-1zM11 29h2v1h-2zM14 29h1v1h-1zM18 29h1v1h-1zM21 29h3v1h-3zM25 29h1v1h-1zM27 29h1v1h-1zM29 29h1v1h-1zM2 30h7v1h-7zM10 30h1v1h-1zM12 30h2v1h-2zM16 30h1v1h-1zM19 30h2v1h-2zM23 30h2v1h-2zM26 30h3v1h-3z" fill="#000"/></svg>
-  <a href="https://santago2026.github.io/">santago2026.github.io</a>
-</div>
-
-<footer class="chiusura">
-  <p>Prezzi in euro. <strong>Bicchieri e stoviglie compostabili.</strong></p>
-  <p>Grazie per fare la differenziata negli appositi contenitori.</p>
-</footer>
 
 </body>
 </html>
