@@ -221,7 +221,7 @@ body.mostra-stampa .barra-stampa{display:flex}
     @page{size:A4;margin:12mm}
     body{background:#fff;color:#000;font-size:10.5pt;line-height:1.3}
     .banchi,.chiusura{display:none}
-    .qr{margin:6mm auto 0; padding:0; break-inside:avoid}
+    .qr{margin:5mm auto 0; padding:0; break-inside:avoid; page-break-inside:avoid}
     .qr svg{width:74px; height:74px; border:1pt solid #000; padding:4px}
     .qr p{color:#000; font-size:7.5pt}
     .qr a{color:#000; font-size:7.5pt}
@@ -263,7 +263,7 @@ body.mostra-stampa .barra-stampa{display:flex}
     body.stampa-colore *{-webkit-print-color-adjust:exact; print-color-adjust:exact}
     body.stampa-colore .testata{
       background:var(--verde); color:var(--panna);
-      padding:10mm 8mm 8mm; border-bottom:none;
+      padding:6mm 7mm 5mm; border-bottom:none;
     }
     body.stampa-colore .occhiello{color:var(--mais)}
     body.stampa-colore .titolo .riga2{color:var(--panna)}
@@ -281,6 +281,12 @@ body.mostra-stampa .barra-stampa{display:flex}
     body.stampa-colore .prezzo{color:var(--rosso)}
     body.stampa-colore .formato small{color:rgba(20,69,47,.7)}
     body.stampa-colore .punti{border-bottom:.5pt dotted rgba(20,69,47,.4)}
+    /* recupero verticale: la versione a colori ha piu' padding del b/n
+       e senza questi ritocchi il QR scivola in seconda pagina */
+    body.stampa-colore .sezione{margin-top:5mm}
+    body.stampa-colore .insegna{padding:3.5pt 8pt}
+    body.stampa-colore .voce{padding:4pt 0}
+    body.stampa-colore .qr{margin-top:4mm}
   }
 </style>
 </head>
