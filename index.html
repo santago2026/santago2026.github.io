@@ -285,13 +285,14 @@ body.mostra-stampa .barra-stampa{display:flex}
     /* la testata a colori ha un riquadro pieno: serve un po' di respiro in meno */
     body.stampa-colore .insegna{padding:3.5pt 8pt}
 
-    /* ===== solo bianco e nero: ultimi millimetri per tenere il QR in prima pagina ===== */
-    body:not(.stampa-colore) .testata{padding-bottom:4mm}
-    body:not(.stampa-colore) .sezione{margin-top:4mm}
-    body:not(.stampa-colore) .voce{padding:3.5pt 0}
-    body:not(.stampa-colore) .insegna{padding-bottom:2pt}
-    body:not(.stampa-colore) .qr{margin-top:3mm}
-    body:not(.stampa-colore) .qr svg{width:66px; height:66px}
+    /* ===== solo bianco e nero: senza riquadri pieni avanza spazio, quindi
+       qui le spaziature sono piu' larghe di quelle della versione a colori ===== */
+    body:not(.stampa-colore) .testata{padding-bottom:5mm}
+    body:not(.stampa-colore) .sezione{margin-top:5.5mm}
+    body:not(.stampa-colore) .voce{padding:4.5pt 0}
+    body:not(.stampa-colore) .insegna{padding-bottom:3pt}
+    body:not(.stampa-colore) .qr{margin-top:4mm}
+    body:not(.stampa-colore) .qr svg{width:74px; height:74px}
   }
 </style>
 </head>
