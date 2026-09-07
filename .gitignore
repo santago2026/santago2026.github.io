@@ -1,1 +1,8 @@
+# Ignora l'intera cartella docs (tutti i file e sottocartelle)
 /docs/
+
+# Ignora il file materie_prime.xlsx nella root
+/materie_prime*.xlsx
+
+# Ignora il file files.zip nella root
+/files.zip
